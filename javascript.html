@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Venus</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script> 
+
+	var votes= 0;
+
+	function upvote() {
+		votes = votes+1;
+		$('#votes').text(votes);
+
+	}
+
+	function downvote (){
+		votes=votes-1;
+		alert(votes);
+		console.log(votes);
+
+	}
+
+	function changecolour() {
+		$('body').css('background','none');
+		$('body').css('background-color','green');
+
+
+	}
+
+	function convert () {
+		var cel = $('#celsius').val();
+		var fahrenheit= cel*9/5+32;
+		$('#fahrenheit').val(fahrenheit);
+
+
+	}
+
+
+	</script> 
+
+<! java script jquery allows you to code in css language)
+<! modify alert>
+
+<! if there is an error, you can use pop up to warn>
+
+<! one bootstrap style only> 
+
+
+</head>
+<! put in java to work/interactive but have to use css below because bootstrap understands css> 
+
+
+	<body>
+
+	<label>Celsius</label><input id="celsius" type="text"><br><br>
+	<label>Fahrenheit</label><input id="fahrenheit" type="text">
+
+
+	<h1 align="center" id="votes">0</h1>
+
+	<button onclick="upvote()" style="width:150px;" class="btn btn-warning">+1</button>
+	<button onclick="downvote()" style="width:150px;" class="btn btn-info">-1</button>
+	<button onclick="changecolour()" class="btn btn-success">Greenify!</button>
+	<button onclick="convert()" class="btn btn-danger">Convert!</button>
+
+	
+
+</body>
+
+
+</html>
